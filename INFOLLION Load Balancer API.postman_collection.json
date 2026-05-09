@@ -1,0 +1,115 @@
+{
+  "info": {
+    "_postman_id": "6c06cf59-d14f-46da-b8bc-4ad15cb3b433",
+    "name": "INFOLLION Load Balancer API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "37747624"
+  },
+  "item": [
+    {
+      "name": "Metrics dashboard",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/metrics",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "metrics"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Route endpoint",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/route",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "route"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mark Node Unhealthy",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/nodes/Node-A/down",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "nodes",
+            "Node-A",
+            "down"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mark Node Healthy",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/nodes/Node-A/up",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "nodes",
+            "Node-A",
+            "up"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Route fixed IP",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/route?ip=192.168.1.5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "route"
+          ],
+          "query": [
+            {
+              "key": "ip",
+              "value": "192.168.1.5"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
