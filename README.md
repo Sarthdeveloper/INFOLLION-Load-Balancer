@@ -4,6 +4,9 @@ A beginner-friendly backend load balancer project built using Node.js and Expres
 This project replaces random request routing with Consistent Hashing using Virtual Nodes for stable and scalable request distribution.
 
 ---
+## Deployment Link
+
+https://infollion-load-balancer.onrender.com/
 
 # Features
 
