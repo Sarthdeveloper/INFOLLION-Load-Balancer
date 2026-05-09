@@ -23,7 +23,61 @@
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Metrics dashboard",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/metrics",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "metrics"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1217"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"4c1-cPvq1BE00bHdHMyJxgMyf6Y3ces\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 09 May 2026 17:17:40 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"totalRequests\": 10,\n    \"ringPoints\": 100,\n    \"nodes\": [\n        {\n            \"id\": \"Node-A\",\n            \"capacity\": 100,\n            \"currentLoad\": 6,\n            \"requestsHandled\": 6,\n            \"isHealthy\": true,\n            \"weight\": 6\n        },\n        {\n            \"id\": \"Node-B\",\n            \"capacity\": 200,\n            \"currentLoad\": 2,\n            \"requestsHandled\": 2,\n            \"isHealthy\": true,\n            \"weight\": 2\n        },\n        {\n            \"id\": \"Node-C\",\n            \"capacity\": 150,\n            \"currentLoad\": 1,\n            \"requestsHandled\": 1,\n            \"isHealthy\": true,\n            \"weight\": 1\n        },\n        {\n            \"id\": \"Node-D\",\n            \"capacity\": 120,\n            \"currentLoad\": 1,\n            \"requestsHandled\": 1,\n            \"isHealthy\": true,\n            \"weight\": 1\n        }\n    ],\n    \"recentLogs\": [\n        {\n            \"ip\": \"168.248.185.225\",\n            \"routedTo\": \"Node-A\",\n            \"time\": \"2026-05-09T17:17:30.282Z\"\n        },\n        {\n            \"ip\": \"133.75.144.245\",\n            \"routedTo\": \"Node-B\",\n            \"time\": \"2026-05-09T17:17:30.283Z\"\n        },\n        {\n            \"ip\": \"239.171.159.111\",\n            \"routedTo\": \"Node-C\",\n            \"time\": \"2026-05-09T17:17:30.283Z\"\n        },\n        {\n            \"ip\": \"86.194.28.94\",\n            \"routedTo\": \"Node-A\",\n            \"time\": \"2026-05-09T17:17:30.284Z\"\n        },\n        {\n            \"ip\": \"8.236.193.149\",\n            \"routedTo\": \"Node-A\",\n            \"time\": \"2026-05-09T17:17:30.284Z\"\n        },\n        {\n            \"ip\": \"31.231.53.91\",\n            \"routedTo\": \"Node-B\",\n            \"time\": \"2026-05-09T17:17:30.284Z\"\n        },\n        {\n            \"ip\": \"174.118.22.149\",\n            \"routedTo\": \"Node-A\",\n            \"time\": \"2026-05-09T17:17:30.284Z\"\n        },\n        {\n            \"ip\": \"134.181.17.25\",\n            \"routedTo\": \"Node-A\",\n            \"time\": \"2026-05-09T17:17:30.285Z\"\n        },\n        {\n            \"ip\": \"176.33.148.120\",\n            \"routedTo\": \"Node-A\",\n            \"time\": \"2026-05-09T17:17:30.285Z\"\n        },\n        {\n            \"ip\": \"49.189.30.192\",\n            \"routedTo\": \"Node-D\",\n            \"time\": \"2026-05-09T17:17:30.285Z\"\n        }\n    ]\n}"
+        }
+      ]
     },
     {
       "name": "Route endpoint",
@@ -42,28 +96,114 @@
           ]
         }
       },
-      "response": []
-    },
-    {
-      "name": "Mark Node Unhealthy",
-      "request": {
-        "method": "POST",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/nodes/Node-A/down",
-          "protocol": "http",
-          "host": [
-            "localhost"
+      "response": [
+        {
+          "name": "Route endpoint",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/route",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "route"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "44"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"2c-tyeKIzTK1yZkklNWns0uAopAFvI\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 09 May 2026 17:18:30 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
           ],
-          "port": "3000",
-          "path": [
-            "nodes",
-            "Node-A",
-            "down"
-          ]
+          "cookie": [],
+          "body": "{\n    \"ip\": \"139.189.199.198\",\n    \"routedTo\": \"Node-D\"\n}"
+        },
+        {
+          "name": "Route endpoint",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/route",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "route"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "42"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"2a-ONZCe9u9ZemYb5fAEywRXjt16GY\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 09 May 2026 17:20:31 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"ip\": \"182.89.223.11\",\n    \"routedTo\": \"Node-D\"\n}"
         }
-      },
-      "response": []
+      ]
     },
     {
       "name": "Mark Node Healthy",
@@ -71,7 +211,7 @@
         "method": "POST",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/nodes/Node-A/up",
+          "raw": "http://localhost:3000/nodes/Node-B/up",
           "protocol": "http",
           "host": [
             "localhost"
@@ -79,12 +219,123 @@
           "port": "3000",
           "path": [
             "nodes",
-            "Node-A",
+            "Node-B",
             "up"
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Mark Node Healthy",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/nodes/Node-A/up",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "nodes",
+                "Node-A",
+                "up"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "58"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"3a-03VjugwBAfqRx54/y4mjPktQvTM\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 09 May 2026 17:28:07 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Node-A marked healthy\",\n    \"activeRingPoints\": 100\n}"
+        },
+        {
+          "name": "Mark Node Healthy",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/nodes/Node-B/up",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "nodes",
+                "Node-B",
+                "up"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "58"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"3a-AIf+ySqIg4Cn1hrNBI44lgb7Avc\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 09 May 2026 17:29:24 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Node-B marked healthy\",\n    \"activeRingPoints\": 100\n}"
+        }
+      ]
     },
     {
       "name": "Route fixed IP",
@@ -109,7 +360,258 @@
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Route fixed IP",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/route?ip=192.168.1.6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "route"
+              ],
+              "query": [
+                {
+                  "key": "ip",
+                  "value": "192.168.1.6"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "40"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"28-g+Gs8FLz6TrVqM3fgtYR+gglX40\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 09 May 2026 17:21:11 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"ip\": \"192.168.1.6\",\n    \"routedTo\": \"Node-D\"\n}"
+        },
+        {
+          "name": "Route fixed IP",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/route?ip=192.168.1.5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "route"
+              ],
+              "query": [
+                {
+                  "key": "ip",
+                  "value": "192.168.1.5"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "40"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"28-HmnC6F65Y91wKSXQyze4mxRz434\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 09 May 2026 17:21:27 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"ip\": \"192.168.1.5\",\n    \"routedTo\": \"Node-A\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Mark Node Unhealthy",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/nodes/Node-B/down",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "nodes",
+            "Node-B",
+            "down"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Mark Node Unhealthy",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/nodes/Node-A/down",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "nodes",
+                "Node-A",
+                "down"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "59"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"3b-Qhpaj6Dy60tfCEoj8Anpe1MX7UQ\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 09 May 2026 17:23:33 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Node-A marked unhealthy\",\n    \"activeRingPoints\": 40\n}"
+        },
+        {
+          "name": "Mark Node Unhealthy",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/nodes/Node-B/down",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "nodes",
+                "Node-B",
+                "down"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "59"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"3b-zxMb4z7f8zz+X/4pRqnmX9HXMgs\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 09 May 2026 17:23:49 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Node-B marked unhealthy\",\n    \"activeRingPoints\": 20\n}"
+        }
+      ]
     }
   ]
 }
